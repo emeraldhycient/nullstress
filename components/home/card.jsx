@@ -5,13 +5,24 @@ const Card = () => {
   return (
     <View
       style={[
-        tw`bg-[#3a3073] h-44 mt-4 px-4 py-4 mx-auto rounded-lg border border-[#3a3073]`,
-        { width: "90%" },
+        tw`bg-[#3a3073] h-44 mt-4 px-4 py-4 mx-auto rounded-lg border border-[#3a3073] `,
+        {
+          width: "90%",
+          shadowColor: "#000",
+          shadowOffset: {
+            width: 0,
+            height: 12,
+          },
+          shadowOpacity: 0.58,
+          shadowRadius: 8.0,
+
+          elevation: 24,
+        },
       ]}
     >
       <View style={tw`flex flex-row justify-between  `}>
         <View style={tw`flex flex-col  justify-between pb-8`}>
-          <Text style={tw`text-gray-100 text-lg font-medium`}>
+          <Text style={tw`text-gray-100 text-lg font-bold`}>
             Igweze Hycient
           </Text>
           <View style={tw`mt-6`}>
@@ -20,7 +31,7 @@ const Card = () => {
             >
               Balance
             </Text>
-            <Text style={tw`text-gray-100 text-2xl font-extrabold`}>
+            <Text style={tw`text-gray-100 text-3xl font-extrabold`}>
               ₦1,000,000
             </Text>
           </View>
