@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView } from "react-native";
+import { View, ScrollView, SafeAreaView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import tw from "twrnc";
 import Card from "../components/home/card";
@@ -10,41 +10,43 @@ import Feather from "react-native-vector-icons/Feather";
 const Home = () => {
   return (
     <SafeAreaView>
-      <View style={tw`android:mt-8`}>
-        <StatusBar style="auto" />
-        <Card />
-        <View
-          style={tw`mt-8 px-4 mx-auto flex flex-row justify-between items-center flex-wrap`}
-        >
-          <Services
-            name="Data"
-            icon={
-              <Ionicons name="cellular" style={tw`text-red-300`} size={30} />
-            }
-          />
-          <Services
-            name="Airtime"
-            icon={
-              <Feather name="phone-call" style={tw`text-red-300`} size={30} />
-            }
-          />
-          <Services
-            name="TV Subscription"
-            icon={<Entypo name="tv" style={tw`text-red-300`} size={30} />}
-          />
-          <Services
-            name="Electricity"
-            icon={
-              <Entypo name="power-plug" style={tw`text-red-300`} size={35} />
-            }
-          />
-          <Services
-            name="Water"
-            icon={<Entypo name="water" style={tw`text-red-300`} size={30} />}
-          />
-          <Services />
+      <ScrollView>
+        <View style={tw`android:mt-8`}>
+          <StatusBar style="auto" />
+          <Card />
+          <View
+            style={tw`mt-8 px-4 mx-auto flex flex-row justify-between items-center flex-wrap`}
+          >
+            <Services
+              name="Data"
+              icon={
+                <Ionicons name="cellular" style={tw`text-red-300`} size={30} />
+              }
+            />
+            <Services
+              name="Airtime"
+              icon={
+                <Feather name="phone-call" style={tw`text-red-300`} size={30} />
+              }
+            />
+            <Services
+              name="TV Subscription"
+              icon={<Entypo name="tv" style={tw`text-red-300`} size={30} />}
+            />
+            <Services
+              name="Electricity"
+              icon={
+                <Entypo name="power-plug" style={tw`text-red-300`} size={35} />
+              }
+            />
+            <Services
+              name="Water"
+              icon={<Entypo name="water" style={tw`text-red-300`} size={30} />}
+            />
+            <Services />
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
