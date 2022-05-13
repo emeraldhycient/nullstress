@@ -1,9 +1,10 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import tw from "twrnc";
 
 const Services = ({ name, icon, link, navigation }) => {
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => navigation.navigate(`${link}`)}
       style={[
         tw`bg-gray-300 ios:h-28 android:h-32 mx-2 my-2 rounded-lg`,
         { width: "44%" },
@@ -31,7 +32,7 @@ const Services = ({ name, icon, link, navigation }) => {
         <Text>{}</Text>
         <Text style={tw`text-xl font-extrabold text-slate-600`}>{name}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
